@@ -17,7 +17,7 @@ var NewMovie models.Movie
 func GetMovie(w http.ResponseWriter, r *http.Request) {
 	newMovies := models.GetAllMovies()
 	res, _ := json.Marshal(newMovies)
-	w.Header().Set("Content-Typ", "pkglication/json")
+	w.Header().Set("Content-Type", "pkglication/json")
 	w.WriteHeader(http.StatusOK)
 	w.Write(res)
 }
